@@ -29,5 +29,6 @@ Sleep(1400)
 PressAndReleaseKey("a")
 Sleep(100)
 PressAndReleaseKey("d")
+Sleep(100)
 end
 end
