@@ -1,0 +1,33 @@
+function OnEvent(event, arg)
+	if (event == "MOUSE_BUTTON_RELEASED" and arg == 9) then
+
+		if (not IsKeyLockOn("capslock")) then
+			PressKey("capslock")
+			Sleep(5)
+			ReleaseKey("capslock")
+
+		end
+fishing()
+	end
+end
+
+function fishing()
+period=23000
+min=5000
+spacer=390
+times=(period-min)/spacer
+while (IsKeyLockOn("capslock")) do
+PressKey("e")
+Sleep(600)
+ReleaseKey("e")
+Sleep(min)
+for i=1,times,1 do
+PressAndReleaseKey("e")
+Sleep(spacer)
+end
+Sleep(1400)
+PressAndReleaseKey("a")
+Sleep(100)
+PressAndReleaseKey("d")
+end
+end
